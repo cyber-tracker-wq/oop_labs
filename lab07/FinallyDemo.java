@@ -1,6 +1,5 @@
 public class FinallyDemo {
 
-    @SuppressWarnings("finally")
     static int tricky() {
         try {
             System.out.println("in try, about to return 1");

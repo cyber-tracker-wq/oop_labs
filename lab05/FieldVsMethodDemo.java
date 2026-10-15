@@ -16,7 +16,7 @@ public class FieldVsMethodDemo {
 
         System.out.println("Method: " + p.who());     // Child.who()   (decided at RUN time)
         System.out.println("Field : " + p.label);     // Parent's field (decided at COMPILE time)
-        System.out.println("Static: " + p.kind());    // Parent's static (compile time)
+        System.out.println("Static: " + Parent.kind()); // Static methods are selected by class
         System.out.println("Field via cast: " + ((Child) p).label);
     }
 }
