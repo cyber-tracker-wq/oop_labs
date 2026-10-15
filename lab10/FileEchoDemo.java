@@ -6,9 +6,11 @@ public class FileEchoDemo {
     public static void main(String[] args) throws IOException {
         Scanner in = new Scanner(System.in);
         List<String> lines = new ArrayList<>();
-        for (int i = 1; i <= 5; i++) {
-            System.out.print("Line " + i + ": ");
-            lines.add(in.nextLine());
+        try (in) {
+            for (int i = 1; i <= 5; i++) {
+                System.out.print("Line " + i + ": ");
+                lines.add(in.nextLine());
+            }
         }
 
         Path file = Path.of("notes.txt");
